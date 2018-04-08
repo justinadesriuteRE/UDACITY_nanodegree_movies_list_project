@@ -8,7 +8,7 @@ main_page_head = '''
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
+    <title>JD's top movies</title>
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -65,8 +65,8 @@ main_page_head = '''
         }
         .fa {
             padding: 10px;
-            font-size: 20px;
-            width: 50px;
+            font-size: 16px;
+            width: 40px;
             text-align: center;
             text-decoration: none;
         }
@@ -141,6 +141,8 @@ main_page_content = '''
       {movie_tiles}
     </div>
     <footer class="page-footer">
+        <paper-button></paper-button>
+        <p>Feel free to discuss the movies - reach me via </p>
         <a href="http://facebook.com/justina.desriute" target="_blank" class="fa fa-facebook"></a>
         <a href="https://www.linkedin.com/in/justina-de%C5%A1ri%C5%ABt%C4%97-966153101/" target="_blank" class="fa fa-linkedin"></a>
     </footer>
@@ -148,16 +150,17 @@ main_page_content = '''
 </html>
 '''
 
-
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+            data-trailer-youtube-id="{trailer_youtube_id}"
+            data-toggle="modal"
+            data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
     <p>{movie_overview}</p>
 </div>
 '''
-
 
 def create_movie_tiles_content(movies):
     # The HTML content for this section of the page

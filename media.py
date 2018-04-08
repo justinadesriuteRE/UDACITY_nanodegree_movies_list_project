@@ -1,3 +1,4 @@
+# Class defining movie object.
 class Movie () :
 
     def __init__(self, movie_title, poster_image_url, movie_overview, trailer_youtube_id, trailer_youtube_url):

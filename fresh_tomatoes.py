@@ -85,15 +85,18 @@ main_page_head = '''
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
         $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
-            // Remove the src so the player itself gets removed, as this is the only
+            // Remove the src so the player itself gets removed,
+            // as this is the only
             // reliable way to ensure the video stops playing in IE
             $("#trailer-video-container").empty();
         });
         // Start playing the video whenever the trailer modal is opened
         $(document).on('click', '.movie-tile', function (event) {
             var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
-            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
-            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+            var sourceUrl = 'http://www.youtube.com/embed/' +
+                trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append
+            ($("<iframe></iframe>", {
               'id': 'trailer-video',
               'type': 'text-html',
               'src': sourceUrl,
@@ -118,7 +121,8 @@ main_page_content = '''
     <div class="modal" id="trailer">
       <div class="modal-dialog">
         <div class="modal-content">
-          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+          <a href="#" class="hanging-close" data-dismiss="modal"
+            aria-hidden="true">
             <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
           </a>
           <div class="scale-media" id="trailer-video-container">
@@ -143,8 +147,11 @@ main_page_content = '''
     <footer class="page-footer">
         <paper-button></paper-button>
         <p>Feel free to discuss the movies - reach me via </p>
-        <a href="http://facebook.com/justina.desriute" target="_blank" class="fa fa-facebook"></a>
-        <a href="https://www.linkedin.com/in/justina-de%C5%A1ri%C5%ABt%C4%97-966153101/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="http://facebook.com/justina.desriute"
+        target="_blank" class="fa fa-facebook"></a>
+        <a href="https://www.linkedin.com/in/"
+        "justina-de%C5%A1ri%C5%ABt%C4%97-966153101/"
+        target="_blank" class="fa fa-linkedin"></a>
     </footer>
   </body>
 </html>
